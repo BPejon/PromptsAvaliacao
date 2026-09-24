@@ -220,7 +220,9 @@ Report Content:
 """
 
 
-ARTIGO = r""" """
+ARTIGO = r""" 
+
+"""
 
 def create_deepseek_client() -> OpenAI:
     """Cria o cliente DeepSeek usando a chave fornecida pelo ambiente."""
