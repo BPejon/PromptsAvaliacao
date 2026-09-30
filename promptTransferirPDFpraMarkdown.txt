@@ -1,0 +1,11 @@
+Vou te passar um pdf de um artigo científico. Quero que transforme ele em um arquivo no formato markdown que eu consiga baixar.
+Não modifique seu conteúdo.
+Evite parágrafos quebrados por imagem. Por exemplo, se no meio do parágrafo tiver uma imagem, primeiro termine o parágrafo e então insira a legenda da imagem.
+Não faça descrição da imagem, insira apenas sua legenda.
+Nas Fórmulas matemáticas, insira a fórmula entre $$.
+Por exemplo: 
+$$
+\omega = \gamma B_{o} \quad (1)
+$$
+
+Qualquer dúvida me chame
