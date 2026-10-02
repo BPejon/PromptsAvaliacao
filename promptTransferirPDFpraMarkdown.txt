@@ -11,5 +11,12 @@ $$
 Exemplo do Markdown:
 ## Introdução
 
+1- Primeiro extraia todas as seções. 
+2- Depois, extraia a seção das referências.
+
 Qualquer dúvida me chame
 
+omit page extraction markers
+IMPORTANT:
+
+Verifique se as tabelas estão com todos os dados preenchidos, em seguida verifique se estão preenchidos com dados corretos.
