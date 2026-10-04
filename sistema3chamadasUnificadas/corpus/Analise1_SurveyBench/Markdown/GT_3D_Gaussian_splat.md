@@ -462,8 +462,6 @@ To the best of our knowledge, this survey presents the first comprehensive overv
 
 ## References
 
-## REFERENCES
-
 [1] S. J. Gortler, R. Grzeszczuk, R. Szeliski, and M. F. Cohen, "The lumigraph," in Seminal Graphics Papers: Pushing the Boundaries, Volume 2, 2023, pp. 453–464.
 
 [2] M. Levoy and P. Hanrahan, "Light field rendering," in Seminal Graphics Papers: Pushing the Boundaries, Volume 2, 2023, pp. 441–452.

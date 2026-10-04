@@ -2,6 +2,7 @@ Vou te passar um pdf de um artigo científico. Quero que transforme ele em um ar
 Não modifique seu conteúdo.
 Evite parágrafos quebrados por imagem. Por exemplo, se no meio do parágrafo tiver uma imagem, primeiro termine o parágrafo e então insira a legenda da imagem.
 Não faça descrição da imagem, insira apenas sua legenda.
+Quero que faça uma extração seção por seção.
 Nas Fórmulas matemáticas, insira a fórmula entre $$.
 Por exemplo: 
 $$
@@ -14,9 +15,20 @@ Exemplo do Markdown:
 1- Primeiro extraia todas as seções. 
 2- Depois, extraia a seção das referências.
 
-Qualquer dúvida me chame
+Omita marcadores de extração de página
+IMPORTANTE:
+1. Verifique se todas as tabelas foram extraidas
+2. Verifique se as tabelas estão com todos os dados preenchidos,
+3. Verifique se as tabelas estão preenchidos com dados corretos.
+4. Verifique se todas as seções foram extraidas. Se alguma seção não foi extraida, então extraia.
+5. Verifique se o conteúdo das tabelas com "✓" está correto. Normalmente há erros na ordem dos símbolos de corretos. Peça para o usuário averiguar a ordem dos "✓".
+6. Verifique se há erros de markdown lint. Se tiver, corrija.
 
-omit page extraction markers
-IMPORTANT:
+Qualquer dúvida me para resolver alguma questão me mande mensagem.
 
-Verifique se as tabelas estão com todos os dados preenchidos, em seguida verifique se estão preenchidos com dados corretos.
+Extraia a seção de referências desta forma:
+## References
+
+[1] S. J. Gortler, R. Grzeszczuk, R. Szeliski, and M. F. Cohen, "The lumigraph," in Seminal Graphics Papers: Pushing the Boundaries, Volume 2, 2023, pp. 453–464.
+
+[2] M. Levoy and P. Hanrahan, "Light field rendering," in Seminal Graphics Papers: Pushing the Boundaries, Volume 2, 2023, pp. 441–452.
