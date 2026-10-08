@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{graphicx}
+\begin{document}
+
+\begin{table}
+\centering
+\caption{Resultados das avalia\c{c}\~oes dos sistemas para artigos \textit{3D Object Detection}}
+\label{tab:resultados-3d-object-detection}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l |rrrr|rrrr|rrrr|rrrr|rrrr|}
+\hline
+Tema & \multicolumn{20}{|c|}{Sistemas} \\
+3D\_Object & \multicolumn{4}{|c|}{GT\_3D} & \multicolumn{4}{c|}{AutoSurvey} & \multicolumn{4}{c|}{LLMxMR-V2} & \multicolumn{4}{c|}{OpenAI\_DP} & \multicolumn{4}{c|}{SurveyForge} \\
+\cline{2-21}
+\hline
+Crit\'erio & R1 & R2 & R3 & Media & R1 & R2 & R3 & Media & R1 & R2 & R3 & Media & R1 & R2 & R3 & Media & R1 & R2 & R3 & Media \\
+\hline
+1 & 5 & 5 & 5 & 5,00 & 3 & 3 & 3 & 3,00 & 4 & 3 & 3 & 3,34 & 4 & 4 & 5 & 4,34 & 3 & 3 & 3 & 3,00 \\
+2 & 5 & 5 & 5 & 5,00 & 4 & 4 & 4 & 4,00 & 4 & 3 & 4 & 3,67 & 5 & 5 & 5 & 5,00 & 4 & 4 & 3 & 3,67 \\
+3 & 4 & 4 & 4 & 4,00 & 3 & 4 & 4 & 3,67 & 3 & 3 & 3 & 3,00 & 4 & 4 & 4 & 4,00 & 3 & 4 & 3 & 3,34 \\
+4 & 4 & 5 & 5 & 4,67 & 3 & 3 & 3 & 3,00 & 3 & 3 & 3 & 3,00 & 4 & 4 & 4 & 4,00 & 2 & 3 & 3 & 2,67 \\
+5 & 2 & 3 & 3 & 2,67 & 3 & 2 & 3 & 2,67 & 3 & 3 & 3 & 3,00 & 3 & 3 & 3 & 3,00 & 2 & 2 & 2 & 2,00 \\
+6 & 3 & 3 & 3 & 3,00 & 2 & 2 & 3 & 2,34 & 3 & 2 & 3 & 2,67 & 2 & 2 & 2 & 2,00 & 1 & 2 & 1 & 1,34 \\
+7 & 3 & 3 & 3 & 3,00 & 3 & 3 & 3 & 3,00 & 3 & 3 & 3 & 3,00 & 2 & 2 & 3 & 2,34 & 3 & 3 & 3 & 3,00 \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+\end{document}

@@ -1,119 +1,101 @@
 ```json
 {
-  "accuracy_evidence": 4,
-  "citation_integrity": 2,
-  "writing_quality_consistency": 4,
-  "coverage": 5,
-  "relevance": 5,
-  "structure": 5,
-  "synthesis": 5
+  "accuracy_evidence": 3,
+  "citation_integrity": 3,
+  "writing_quality_consistency": 3,
+  "coverage": 4,
+  "relevance": 4,
+  "structure": 4,
+  "synthesis": 4
 }
 ```
 
 ## Overall Assessment
 
-The survey is broad, well organized, and analytically strong, providing a clear account of 3D Gaussian Splatting principles, major research directions, applications, and benchmark comparisons. Its strengths include meaningful taxonomies, coherent progression from foundations to applications, and effective use of comparative tables. The main weaknesses lie in citation integrity and bibliographic consistency: the provided reference list appears incomplete relative to in-text citations, and there are visible duplicate or mismatched citation numbers. Some editorial and quantitative inconsistencies further reduce polish, but the survey remains valuable and readable.
+The survey provides a broad and generally well-organized overview of 3D Gaussian Splatting, covering principles, improvement directions, application areas, benchmarks, and future research directions. Its main strengths are comprehensive scope and useful thematic organization. However, it makes repeated claims of being the “first” or “only” survey that are contradicted by its own discussion of existing surveys, and it contains several internal citation inconsistencies, most visibly in Table 2. A truncated sentence in Section 3.2.2 also disrupts an important technical section.
 
----
+## Evaluation Notes
 
 ### 1. Accuracy & Evidence
 
-**Score:** 4
+**Score: 3**
 
 **Critical observations:**  
-The survey is generally precise and appropriately qualified. Most substantive claims are supported by references, benchmark tables, or explicit reasoning. However, there are some overstatements and ambiguous quantitative claims.
+The survey is broadly coherent and generally supportable, but it contains notable overclaims and at least one performance generalization that exceeds the presented evidence. The claim of novelty is internally inconsistent with the survey’s own acknowledgment of existing survey literature.
 
 **Evidence:**  
-- The claim that this is the “first systematic overview” and “first and only survey” to cover the theoretical background is strong, especially since the survey itself cites prior surveys [25]–[28].
-- In Section 6.1, SplaTAM is said to improve trajectory error by “∼50%,” reducing error from 0.52 cm to 0.36 cm. This is about a 31% reduction in error, so the improvement is unclear unless defined differently.
-- Table 2 labels “NeRF [12]” as a dataset, but NeRF is not itself a dataset.
-- Most conclusions from the benchmarking sections are otherwise consistent with the tables, such as the superior performance of GS-based dynamic reconstruction methods in Table 4.
-
----
+- The abstract and introduction describe the paper as “the first systematic overview” and “the first survey on 3D GS,” while the introduction also compares the survey with existing literature [25]–[28].  
+- The bullet claiming this is “the first and only survey to thoroughly delve into the theoretical background and fundamental principles of 3D GS” is a strong and unsupported novelty claim.  
+- In Section 6.1, the text states that recent GS-based localization algorithms “have a clear advantage” over NeRF-based SLAM, but Table 1 shows Gaussian-SLAM [114] with an average ATE of 3.27 cm, worse than several NeRF baselines such as iMAP [262] and NICE-SLAM [264]. This weakens the general “clear advantage” conclusion.
 
 ### 2. Citation Integrity
 
-**Score:** 2
+**Score: 3**
 
 **Critical observations:**  
-There are substantial internal citation inconsistencies and apparent missing bibliographic entries. Several in-text citation ranges do not correspond to entries in the provided reference list, and there are duplicate or misassigned reference numbers.
+Citation density is generally strong, and most substantive claims are accompanied by references. However, there are clear internal inconsistencies between some in-text table citations and the bibliography, especially in the dataset table.
 
 **Evidence:**  
-- The provided reference list jumps from [41] to [65], from [89] to [113], and from [132] to [158], among others. Many cited works such as [45]–[64], [90]–[112], and [135]–[157] are missing from the bibliography as presented.
-- Table 2 uses reference [298] for both “EndoNeRF” and “Waymo Block-NeRF,” while [298] in the bibliography refers to Block-NeRF.
-- Table 2 also labels “CityNeRF” as [297], but reference [297] in the bibliography is “BungeeNeRF.”
-- Reference [40] is missing author information, which is a bibliographic irregularity.
-
----
+- Table 2 cites “EndoNeRF [298],” but bibliography entry [298] is Block-NeRF. The same reference [298] is also used in Table 2 for “Waymo Block-NeRF,” indicating a conflict; elsewhere the survey correctly refers to EndoNeRF as [258].  
+- Table 2 cites “CityNeRF [297],” but bibliography entry [297] is “BungeeNeRF,” not CityNeRF.  
+- Table 5 lists “NeuralBody [292] [CVPR32],” while reference [292] is from CVPR 2021, suggesting a typographical or bibliographic inconsistency.
 
 ### 3. Writing Quality & Editorial Consistency
 
-**Score:** 4
+**Score: 3**
 
 **Critical observations:**  
-The writing is largely clear, professional, and well structured. Minor typographical and formatting issues are noticeable but do not seriously impair readability.
+The writing is generally fluent and readable, but there are several grammatical problems and one notable incomplete sentence in a core technical section.
 
 **Evidence:**  
-- Table 5 lists “NeuralBody [292] [CVPR32],” which should be CVPR21.
-- Table 4 uses “TOC23” for what is likely “ToG23” or ACM Transactions on Graphics.
-- Reference formatting is occasionally inconsistent, such as the incomplete entry for [40].
-- Terminology is mostly consistent, and figures and tables are integrated into the text effectively.
-
----
+- Section 3.2.2 ends abruptly with: “In addition, to prevent unjustified increases in Gaussian density near input,” leaving the point unfinished.  
+- Minor grammatical issues appear throughout, e.g., “A recent works explored,” “can further enhanced,” and “follow-ups work.”  
+- Some terminology is inconsistent or awkward, such as the alternative use of “GSSLAM” and “GS-SLAM” in different places.
 
 ### 4. Coverage
 
-**Score:** 5
+**Score: 4**
 
 **Critical observations:**  
-The survey covers the major foundational concepts, technical directions, applications, datasets, and open challenges relevant to its stated scope. Coverage is broad and appropriately selective.
+The survey covers most major aspects expected from a 3D Gaussian Splatting review: fundamentals, optimization, major improvement directions, application domains, benchmarking, and future directions. Some areas are less developed than others.
 
 **Evidence:**  
-- Sections 2–3 cover radiance fields, volumetric rendering, point-based rendering, and 3D GS principles.
-- Section 4 addresses sparse inputs, memory efficiency, photorealism, optimization, semantics, hybrid representations, and new rendering algorithms.
-- Section 5 covers robotics, dynamic scenes, generation and editing, avatars, medical imaging, large-scale reconstruction, and physics.
-- Benchmark comparisons and dataset tables provide practical coverage across tasks.
-
----
+- It includes detailed sections on sparse-input methods, memory efficiency, photorealistic rendering, optimization, semantics, hybrid representations, and ray tracing alternatives.  
+- Application coverage is broad, including robotics, dynamic scenes, generation/editing, avatars, endoscopic scenes, large-scale reconstruction, and physics.  
+- However, some announced areas, such as “other scientific disciplines” [24], [174]–[176], are mentioned only briefly. Section 4.7 on new rendering algorithms is also relatively thin compared with other direction sections.
 
 ### 5. Relevance
 
-**Score:** 5
+**Score: 4**
 
 **Critical observations:**  
-The content is consistently aligned with the survey’s stated purpose and scope. Background material is concise and clearly motivated.
+The content is strongly aligned with the stated survey scope and objectives. Background discussions are mostly necessary and connected to 3D GS.
 
 **Evidence:**  
-- The background on NeRF and explicit radiance fields directly supports the survey’s focus on 3D GS.
-- Sections on technical directions and applications are explicitly framed around how they extend or apply 3D GS.
-- Performance comparisons and future directions remain centrally tied to 3D GS.
-
----
+- Background on NeRF, volumetric rendering, and point-based rendering is appropriately motivated.  
+- Application sections sometimes begin with general definitions, but these are quickly tied back to 3D GS-specific challenges and methods.  
+- The benchmarking section directly supports the survey’s stated goal of comparing leading 3D GS models.
 
 ### 6. Structure
 
-**Score:** 5
+**Score: 4**
 
 **Critical observations:**  
-The survey is logically organized and progressively developed. The progression from background to principles to improvements, applications, benchmarking, and future challenges is clear and effective.
+The overall organization is logical and progressive: background, principles, improvement directions, applications, empirical comparisons, and future work. The truncated section in Section 3.2.2 is the main structural weakness.
 
 **Evidence:**  
-- Section 2 establishes necessary background.
-- Section 3 explains the core method.
-- Sections 4 and 5 organize follow-up work by technical direction and application area.
-- Sections 6–8 provide empirical comparison, future challenges, and conclusions, creating a coherent overall narrative.
-
----
+- The use of Figure 2 to outline the paper structure helps orient the reader.  
+- The transition from foundations to improvement directions and then applications is coherent.  
+- Section 3.2.2’s incomplete ending interrupts the explanation of density control, which is central to understanding 3D GS optimization.
 
 ### 7. Synthesis
 
-**Score:** 5
+**Score: 4**
 
 **Critical observations:**  
-The survey goes beyond listing papers and provides meaningful conceptual groupings, comparisons, trade-offs, and research-gap analysis.
+The survey meaningfully groups related works into categories and discusses some trade-offs, trends, and gaps. It does not merely list papers, though some subsections remain moderately enumerative.
 
 **Evidence:**  
-- Section 4 groups methods into conceptually meaningful directions, such as regularization-based vs. generalizable sparse-input methods, or reducing Gaussian count vs. compressing Gaussian properties.
-- Dynamic scene methods are organized into deformation-field approaches and augmented-Gaussian approaches.
-- Comparative tables expose performance differences and efficiency trade-offs.
-- Section 7 derives open research directions from the reviewed literature, rather than merely asserting them.
+- It creates useful taxonomies, e.g., separating sparse-input methods into regularization-based and generalizability-based approaches, and separating dynamic scene methods into deformation-field and augmented-property categories.  
+- Comparative tables in Section 6 provide quantitative synthesis across representative methods.  
+- The future directions are connected to earlier review material, identifying gaps such as physics- and semantics-aware representations, internal structure modeling, and simulation for autonomous driving.
