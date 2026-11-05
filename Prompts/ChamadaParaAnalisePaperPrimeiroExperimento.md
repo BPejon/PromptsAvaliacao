@@ -109,7 +109,6 @@ Quantitative results are reported inconsistently in different sections.
 The survey makes broad claims about trends, superiority, or state of the art without sufficient support in the presented evidence.
 Limitations or contradictory evidence discussed elsewhere in the survey are ignored when drawing conclusions.
 Interpretations or hypotheses are presented as established findings without appropriate qualification.
- 
 
 ## 6. Citation Integrity
 
