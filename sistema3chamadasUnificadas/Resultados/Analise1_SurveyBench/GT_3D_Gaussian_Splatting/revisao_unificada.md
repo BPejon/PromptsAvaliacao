@@ -14,7 +14,10 @@ AVALIAÇÃO UNIFICADA GERADA PELO ChatGPT
   }
 }
 ```
+AutoSurvey 3D Gaussian_splatting.
 
+Realmente, não existe a referencia 19 n existe msm
+19 queria referir a "RadSplat: Radiance Field-Informed Gaussian Splatting for Robust Real-Time Rendering with 900+ FPS" mas está PrASP Report
 ## Accuracy & Evidence
 Score: 3/5
 
